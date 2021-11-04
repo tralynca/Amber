@@ -12,7 +12,7 @@
 
 # Requirements:
 # 1. The csv files produced by COSMO containing the operon predictions
-# 2. The operon list file containing all Mtb operons and their positions and genes
+# 2. The operon list file containing all E.coli operons and their positions and genes
 
 
 
