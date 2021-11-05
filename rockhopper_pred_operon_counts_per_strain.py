@@ -1,17 +1,21 @@
 
-## script name: predicted_operon_counts_per_strain.py # WAS predicted_operons_counts_per_lineage.py
+## script name: rockhopper_predicted_operon_counts_per_strain.py 
+# Author: Tracey Calvert-Joshua - tralynca@gmail.com
 
 #######################################################################################
 
-# script that goes through all COSMO predicted files
+# script that goes through all Rockhopper predicted files
 
-## OUTPUT
-# Output file with extention "_calls_&_cov_all_lineages.txt" : The Prediction (TP, FP, FN) **PER OPERON** for all isolates/strains
-# Output file with extention "_counts_per_isolate" : Prediction **PER STRAIN ** with count of how many TPs, FPs and FNs were predicted per strain
+## OUTPUT = 2 files:
+# 1. Output file with extention "_calls_&_cov_all_lineages.txt" 
+# 	- this contains the prediction (TP, FP, FN) **PER OPERON** for all strains in a directory
+# 2. Output file with extention "_counts_per_isolate"
+#	    -this contains the prediction **PER STRAIN ** with the total count of TPs, FPs and FNs w
+#	    -also outputs the precision, recall and F1 scores
 
-# Requirements:
+## Input requirements:
 # 1. The csv files produced by COSMO containing the operon predictions
-# 2. The operon list file containing all Mtb operons and their positions and genes
+# 2. The operon list file containing all E.coli verified operons and their positions 
 
 ########################################################################################
 
@@ -23,7 +27,7 @@ import math
 print("\nPlease add the path to the directory containing all the csv files produced by Rockhopper and then press ENTER\n e.g. /home/Melissa/Desktop/Rockhopper_input_files/Rockhopper*_replaced.txt \n\nThe '*.csv' part, tells this Python script that all of the input files have different names, but they all end in '.csv'\n\n")
 
 dir_pred_operon_files = input()
-# dir_pred_operon_files = "/home/tracey//Desktop/Amber/Input_files/Rockhopper/corrected_files/Rockhopper*_replaced.txt"
+# dir_pred_operon_files = "/home/tracey/Desktop/Amber/Input_files/Rockhopper/corrected_files/Rockhopper*_replaced.txt"
 print("\n\nPlease add the path to the file with your verified operons from RegulonDB, and then press ENTER\n e.g. /home/Melissa/Desktop/OperonSet_Exp_strong_with_OFFICIAL_gene_names.csv \n\n")
 
 valid_operon_list = input()
