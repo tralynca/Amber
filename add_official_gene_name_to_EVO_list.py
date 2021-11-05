@@ -2,6 +2,10 @@
 
 # Author: Tracey Calvert-Joshua - tralynca@gmail.com - Oct 2021
 
+
+# script to add the official gene names of to the original file
+# which only contained the HGNC symbols
+
 ##############################################################################
 import os.path, glob, itertools
 
