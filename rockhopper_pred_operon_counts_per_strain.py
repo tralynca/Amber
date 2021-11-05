@@ -14,7 +14,7 @@
 #	    -also outputs the precision, recall and F1 scores
 
 ## Input requirements:
-# 1. The csv files produced by COSMO containing the operon predictions
+# 1. The csv files produced by Rockhopper containing the operon predictions
 # 2. The operon list file containing all E.coli verified operons and their positions 
 
 ########################################################################################
