@@ -8,7 +8,7 @@
 ## OUTPUT
 # Output file with extention "_calls_&_cov_all_lineages.txt" : The Prediction (TP, FP, FN) **PER OPERON** for all isolates/strains
 # Output file with extention "_counts_per_isolate" : Prediction **PER STRAIN ** with count of how many TPs, FPs and FNs were predicted per strain
-    # -The file also outputs precision, recall and Fi scores
+    # -The file also outputs precision, recall and F1 scores
 
 # Requirements:
 # 1. The csv files produced by COSMO containing the operon predictions
