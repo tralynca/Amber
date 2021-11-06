@@ -12,9 +12,10 @@ import os.path, glob, itertools
 
 print("\nPlease add the path to the directory file produced by Rockhopper and then press ENTER\n e.g. /home/amber/Desktop/Input_files/Input_files/Rockhopper_control.txt \n\n")
 Rockhopper_list_path = input()
-
 # Rockhopper_list_path = "/home/tracey/Desktop/Amber/Input_files/Rockhopper/Rockhopper_control.txt"
 
+print("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/amber/Desktop/Input_files/GCA_000005845.2_ASM584v2_genomic.gb.ptt \n\n")
+ptt_file_path = input()
 
 out_file_name  = os.path.basename(Rockhopper_list_path).split(".txt")[0] +  "_replaced.txt"
 Heading  = "Operon" + "\t" + "Start" + "\t" + "End" + "\t" + "Length" + "\t" + "Strand" + "\t" + "Number_of_Genes" + "\t" + "Genes"  + "\n"
@@ -32,7 +33,7 @@ out_file.write(Heading)
 # store the lines to a list
 
 ptt_file_list = []
-open_ptt_file = open("/home/tracey/Desktop/Amber/GCA_000005845.2_ASM584v2_genomic.gb.ptt")
+open_ptt_file = open(ptt_file_path )
 for ptt_line in itertools.islice(open_ptt_file, 4 , None): # start at line 4; stop = None
     ptt_line = ptt_line.strip()
     ptt_file_list.append(ptt_line)
