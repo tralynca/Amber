@@ -9,7 +9,12 @@
 ##############################################################################
 import os.path, glob, itertools
 
-EVO_list_path = "/home/tracey/Desktop/Amber/OperonSet_Exp_strong.txt"
+print("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/amber/Desktop/Input_files/GCA_000005845.2_ASM584v2_genomic.gb.ptt \n\n")
+ptt_file_path = input()
+
+print("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/tracey/Desktop/Amber/OperonSet_Exp_strong_filtered.txt \n\n")
+EVO_list_path = input()
+
 out_file_name  = os.path.basename(EVO_list_path).split(".txt")[0] +  "_with_OFFICIAL_gene_names.txt"
 Heading  = "Operon_name" + " " + "First_gene" + " " + "Last_gene" + " " + "start_coordinate" + " " + "end_coordinate" + " " + "strand" + " " + "no_of_genes" + "\n"
 
@@ -19,7 +24,7 @@ out_file.write(Heading)
 
 
 ptt_file_list = []
-open_ptt_file = open("/home/tracey/Desktop/Amber/GCA_000005845.2_ASM584v2_genomic.gb.ptt")
+open_ptt_file = open(ptt_file_path)
 for ptt_line in itertools.islice(open_ptt_file, 4 , None): # start at line 4; stop = None
     ptt_line = ptt_line.strip()
     ptt_file_list.append(ptt_line)
