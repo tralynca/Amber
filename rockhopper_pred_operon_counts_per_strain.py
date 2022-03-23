@@ -24,13 +24,13 @@ import os.path
 import glob
 import math
 
-print("\nPlease add the path to the directory containing all the csv files produced by Rockhopper and then press ENTER\n e.g. /home/Melissa/Desktop/Rockhopper_input_files/Rockhopper*_replaced.txt \n\nThe '*.csv' part, tells this Python script that all of the input files have different names, but they all end in '.csv'\n\n")
 
-dir_pred_operon_files = input()
+
+dir_pred_operon_files = input("\nPlease add the path to the directory containing all the csv files produced by Rockhopper and then press ENTER\n e.g. /home/Melissa/Desktop/Rockhopper_input_files/Rockhopper*_replaced.txt \n\nThe '*.csv' part, tells this Python script that all of the input files have different names, but they all end in '.csv'\n\n")
 # dir_pred_operon_files = "/home/tracey/Desktop/Amber/Input_files/Rockhopper/corrected_files/Rockhopper*_replaced.txt"
-print("\n\nPlease add the path to the file with your verified operons from RegulonDB, and then press ENTER\n e.g. /home/Melissa/Desktop/OperonSet_Exp_strong_with_OFFICIAL_gene_names.csv \n\n")
 
-valid_operon_list = input()
+
+valid_operon_list = input("\n\nPlease add the path to the file with your verified operons from RegulonDB, and then press ENTER\n e.g. /home/Melissa/Desktop/OperonSet_Exp_strong_with_OFFICIAL_gene_names.csv \n\n")
 
 # valid_operon_list = "/home/tracey/Desktop/Amber/OperonSet_Exp_strong_with_OFFICIAL_gene_names.csv"
 pred_operons_path = glob.glob(dir_pred_operon_files)
