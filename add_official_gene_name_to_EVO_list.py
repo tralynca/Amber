@@ -9,11 +9,11 @@
 ##############################################################################
 import os.path, glob, itertools
 
-print("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/amber/Desktop/Input_files/GCA_000005845.2_ASM584v2_genomic.gb.ptt \n\n")
-ptt_file_path = input()
 
-print("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/tracey/Desktop/Amber/OperonSet_Exp_strong_filtered.txt \n\n")
-EVO_list_path = input()
+ptt_file_path = input("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/amber/Desktop/Input_files/GCA_000005845.2_ASM584v2_genomic.gb.ptt \n\n")
+
+
+EVO_list_path = input("\nPlease add the path to the directory and file for the genomic .ptt file and then press ENTER\n e.g. /home/tracey/Desktop/Amber/OperonSet_Exp_strong_filtered.txt \n\n")
 
 out_file_name  = os.path.basename(EVO_list_path).split(".txt")[0] +  "_with_OFFICIAL_gene_names.txt"
 Heading  = "Operon_name" + " " + "First_gene" + " " + "Last_gene" + " " + "start_coordinate" + " " + "end_coordinate" + " " + "strand" + " " + "no_of_genes" + "\n"
